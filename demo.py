@@ -7,7 +7,7 @@ import os
 x = []
 y = []
 z = []
-data_dir = "data/dataset/"
+data_dir = "data/demo/dataset/"
 
 
 def read_file():
@@ -55,10 +55,3 @@ def print_hi():
     print(f"Std of x: {x_std}")
     print(f"Std of y: {y_std}")
     print(f"Std of z: {z_std}")
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    read_file()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
