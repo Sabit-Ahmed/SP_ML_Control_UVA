@@ -17,8 +17,6 @@ def read_csv_files():
     for j in files:
         df = pd.read_csv(f"{data_dir + j}", names=['timestamp', 'x-axis', 'y-axis', 'z-axis'])
         df2 = df_ops(df)
-        activity = j.split('-')[3]
-        df2['activity'] = activity
         output = pd.concat([output, df2], axis=0)
     # print(output)
     save_csv_file(output)
