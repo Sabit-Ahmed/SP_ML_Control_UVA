@@ -12,7 +12,7 @@ def read_csv_file():
     return df
 
 
-def read_csv_files():
+def extract_features():
     output = pd.DataFrame()
     files = os.listdir(f"{data_dir}")
     for j in files:
@@ -51,4 +51,4 @@ def df_ops(df):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    read_csv_files()
+    extract_features()
