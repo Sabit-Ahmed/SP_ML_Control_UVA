@@ -1,23 +1,22 @@
 import pandas as pd
-import numpy as np
-import os
+import glob
 
 data_dir = "data/project_1/formatted_data/"
 feature_dir = "data/project_1/"
 
 def read_csv_file():
-    files = os.listdir(f"{data_dir}")
+    files = glob.glob(data_dir + "/*.csv")
     # df = pd.read_csv(f"{data_dir + files[0]}", names=['timestamp', 'x-axis', 'y-axis', 'z-axis'])
-    df = pd.read_csv(f"{data_dir + files[0]}", names=['timestamp', 'uk1', 'uk2', 'x-axis', 'y-axis', 'z-axis'])
+    df = pd.read_csv(f"{files[0]}", names=['timestamp', 'uk1', 'uk2', 'x-axis', 'y-axis', 'z-axis'])
     return df
 
 
 def extract_features():
     output = pd.DataFrame()
-    files = os.listdir(f"{data_dir}")
+    files = glob.glob(data_dir + "/*.csv")
     for j in files:
         # df = pd.read_csv(f"{data_dir + j}", names=['timestamp', 'x-axis', 'y-axis', 'z-axis'])
-        df = pd.read_csv(f"{data_dir + j}", names=['timestamp', 'uk1', 'uk2', 'x-axis', 'y-axis', 'z-axis'])
+        df = pd.read_csv(f"{j}", names=['timestamp', 'uk1', 'uk2', 'x-axis', 'y-axis', 'z-axis'])
         df.drop(columns=['uk1', 'uk2'], inplace=True)
         df2 = df_ops(df)
         activity = j.split('-')[3]
