@@ -204,8 +204,8 @@ public class MyWekaUtils {
 
     public static void selectFeatures(int classifyOption) {
         try {
-            String[][] csvData = readCSV("/Users/bcw3zj/Desktop/Sabit/fall 23/SP ML and Control/Assignment_2/features.csv");
-            int nFeatures = 6;
+            String[][] csvData = readCSV("/Users/bcw3zj/PycharmProjects/SP_ML_Control/Assignment_1/preprocessdata/2sec.csv");
+            int nFeatures = 12;
             List<Integer> selectedFeatures = new ArrayList<>();
             List<Double> selectedFeaturesResults = new ArrayList<>();
             while (selectedFeatures.size() < nFeatures) {
