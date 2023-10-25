@@ -1,3 +1,5 @@
 .idea
+.vscode
 Assignment_1/data
 Assignment_2/stable-3-8
+*.DS_Store
