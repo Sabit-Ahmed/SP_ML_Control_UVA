@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -32,26 +33,26 @@ public class MyWekaUtils {
 		Instances instances = new Instances(strReader);
 		strReader.close();
 		instances.setClassIndex(instances.numAttributes() - 1);
-		
+
 		Classifier classifier;
 		if(option==1)
 			classifier = new J48(); // Decision Tree classifier
-		else if(option==2)			
+		else if(option==2)
 			classifier = new RandomForest();
 		else if(option == 3)
 			classifier = new SMO();  //This is a SVM classifier
-		else 
+		else
 			return -1;
-		
+
 		classifier.buildClassifier(instances); // build classifier
-		
+
 		Evaluation eval = new Evaluation(instances);
 		eval.crossValidateModel(classifier, instances, 10, new Random(1), new Object[] { });
-		
+
 		return eval.pctCorrect();
 	}
-    
-    
+
+
     public static String[][] readCSV(String filePath) throws Exception {
         StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new FileReader(filePath));
@@ -73,10 +74,10 @@ public class MyWekaUtils {
         String[][] csvData = new String[lineCount][];
         String[] vals;
         int i, j;
-        for (i = 0; i < lineCount; i++) {            
-                csvData[i] = lines.get(i).split(",");            
+        for (i = 0; i < lineCount; i++) {
+                csvData[i] = lines.get(i).split(",");
         }
-        
+
         return csvData;
 
     }
@@ -105,7 +106,7 @@ public class MyWekaUtils {
             for (j = 0; j < fCount; j++) {
                 sb.append(csvData[i][featureIndices[j]]);
                 sb.append(",");
-            }            
+            }
             sb.append(csvData[i][total_cols - 1]);
             sb.append("\n");
         }
@@ -189,11 +190,21 @@ public class MyWekaUtils {
         return slice;
     }
 
-    public static void main(String[] args) {
-	// some code here in the main() method
-        MyWekaUtils obj = new MyWekaUtils();
+    public static String getClassifierName(int option) {
+        String classifier = "Unknown";
+        if(option==1)
+			classifier = "Decision Tree Classifier"; // Decision Tree classifier
+		else if(option==2)
+			classifier = "Random Forest Classifier";
+		else if(option == 3)
+			classifier = "SVM Classifier";  //This is a SVM classifier
+
+        return classifier;
+    }
+
+    public static void selectFeatures(int classifyOption) {
         try {
-            String[][] csvData = obj.readCSV("/Users/bcw3zj/Desktop/Sabit/fall 23/SP ML and Control/Assignment_2/features.csv");
+            String[][] csvData = readCSV("/Users/bcw3zj/Desktop/Sabit/fall 23/SP ML and Control/Assignment_2/features.csv");
             int nFeatures = 6;
             List<Integer> selectedFeatures = new ArrayList<>();
             List<Double> selectedFeaturesResults = new ArrayList<>();
@@ -206,30 +217,46 @@ public class MyWekaUtils {
                     if (!selectedFeatures.contains(i)) {
                         selectedFeatures.add(i);
                         int[] featureIndices = selectedFeatures.stream().mapToInt(j -> j).toArray();
-                        arffData = obj.csvToArff(csvData, featureIndices);
-                        result = obj.classify(arffData, 1);
-                        System.out.println(result);
+                        arffData = csvToArff(csvData, featureIndices);
+                        result = classify(arffData, classifyOption);
+                        String printString = "Feature set " + Arrays.toString(featureIndices)
+                        + "---->" + " accuracy ::" + result;
+                        System.out.println(printString);
                         resultArray[i] = result;
                         selectedFeatures.removeLast();
                     }
                 }
-                int bestFeatureIndex = getIndexOfLargest(resultArray);           
+                int bestFeatureIndex = getIndexOfLargest(resultArray);
                 selectedFeatures.add(bestFeatureIndex);
                 double bestFeatureResult = resultArray[bestFeatureIndex];
                 selectedFeaturesResults.add(bestFeatureResult);
-                System.out.println(selectedFeatures);
-                System.out.println(selectedFeaturesResults);
-            }
-            
-            double[] selectedFeaturesResultsArray = selectedFeaturesResults.stream().mapToDouble(k -> k).toArray();
-            int bestFeatureLastIndex = getIndexOfLargest(selectedFeaturesResultsArray);           
-            
-            int[] bestFeatureIndicesFinal = getSliceOfArray(selectedFeatures.stream().mapToInt(k -> k).toArray(), 0, bestFeatureLastIndex + 1);
+                System.out.println("Selected features ::" + selectedFeatures);
+                // System.out.println(selectedFeaturesResults);
 
+            }
+
+            double[] selectedFeaturesResultsArray = selectedFeaturesResults.stream().mapToDouble(k -> k).toArray();
+            int bestFeatureLastIndex = getIndexOfLargest(selectedFeaturesResultsArray);
+
+            int[] bestFeatureIndicesFinal = getSliceOfArray(selectedFeatures.stream().mapToInt(k -> k).toArray(), 0, bestFeatureLastIndex + 1);
             double bestFeatureResultFinal = selectedFeaturesResultsArray[bestFeatureLastIndex];
-            
-            System.out.println(Arrays.toString(bestFeatureIndicesFinal));
-            System.out.println(bestFeatureResultFinal);
+
+            System.out.println(getClassifierName(classifyOption) + "--->" + "Best feature set:: " + Arrays.toString(bestFeatureIndicesFinal));
+            System.out.println("Best feature set accuracy:: " + bestFeatureResultFinal);
+        }
+        catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+	// some code here in the main() method
+        MyWekaUtils wekaObject = new MyWekaUtils();
+        try {
+            wekaObject.selectFeatures(1);
+            wekaObject.selectFeatures(2);
+            wekaObject.selectFeatures(3);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
