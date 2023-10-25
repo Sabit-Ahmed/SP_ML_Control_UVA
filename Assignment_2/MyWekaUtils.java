@@ -5,13 +5,20 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.functions.SMO;
 import weka.classifiers.trees.J48;
 import weka.classifiers.trees.RandomForest;
 import weka.core.Instances;
+import weka.core.pmml.jaxbbindings.False;
 
 
 /**
@@ -149,15 +156,80 @@ public class MyWekaUtils {
         return newList;
     }
 
+    public static int getIndexOfLargest( double[] array )
+    {
+        if ( array == null || array.length == 0 ) return -1; // null or empty
+        int largest = 0;
+
+        for ( int i = 1; i < array.length; i++ ) {
+            if ( array[i] > array[largest] ) largest = i;
+        }
+
+        return largest; // position of the first largest found
+    }
+
+    public static int[] getSliceOfArray(int[] arr, int startIndex, int endIndex) {
+
+        // Get the slice of the Array
+        int[] slice = IntStream
+
+        // Convert the specified elements
+        // of array into IntStream
+        .range(startIndex, endIndex)
+
+        // Lambda expression to get
+        // the elements of IntStream
+        .map(i -> arr[i])
+
+        // Convert the mapped elements
+        // into the slice array
+        .toArray();
+
+        // return the slice
+        return slice;
+    }
+
     public static void main(String[] args) {
 	// some code here in the main() method
         MyWekaUtils obj = new MyWekaUtils();
         try {
             String[][] csvData = obj.readCSV("/Users/bcw3zj/Desktop/Sabit/fall 23/SP ML and Control/Assignment_2/features.csv");
-            int[] featureList = new int [] {0};
-            String arffData = obj.csvToArff(csvData, featureList);
-            double result = obj.classify(arffData, 1);
-            System.out.println(result);
+            int nFeatures = 6;
+            List<Integer> selectedFeatures = new ArrayList<>();
+            List<Double> selectedFeaturesResults = new ArrayList<>();
+            while (selectedFeatures.size() < nFeatures) {
+                String arffData = "";
+                double result = 0;
+                double[] resultArray = new double [nFeatures];
+                int i;
+                for (i = 0; i < nFeatures; i++) {
+                    if (!selectedFeatures.contains(i)) {
+                        selectedFeatures.add(i);
+                        int[] featureIndices = selectedFeatures.stream().mapToInt(j -> j).toArray();
+                        arffData = obj.csvToArff(csvData, featureIndices);
+                        result = obj.classify(arffData, 1);
+                        System.out.println(result);
+                        resultArray[i] = result;
+                        selectedFeatures.removeLast();
+                    }
+                }
+                int bestFeatureIndex = getIndexOfLargest(resultArray);           
+                selectedFeatures.add(bestFeatureIndex);
+                double bestFeatureResult = resultArray[bestFeatureIndex];
+                selectedFeaturesResults.add(bestFeatureResult);
+                System.out.println(selectedFeatures);
+                System.out.println(selectedFeaturesResults);
+            }
+            
+            double[] selectedFeaturesResultsArray = selectedFeaturesResults.stream().mapToDouble(k -> k).toArray();
+            int bestFeatureLastIndex = getIndexOfLargest(selectedFeaturesResultsArray);           
+            
+            int[] bestFeatureIndicesFinal = getSliceOfArray(selectedFeatures.stream().mapToInt(k -> k).toArray(), 0, bestFeatureLastIndex + 1);
+
+            double bestFeatureResultFinal = selectedFeaturesResultsArray[bestFeatureLastIndex];
+            
+            System.out.println(Arrays.toString(bestFeatureIndicesFinal));
+            System.out.println(bestFeatureResultFinal);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
