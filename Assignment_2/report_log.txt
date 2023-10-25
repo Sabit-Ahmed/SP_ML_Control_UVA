@@ -276,3 +276,283 @@ Feature set [11, 6, 7, 10, 3, 0, 2, 1, 4, 5, 8, 9]----> accuracy ::98.4674329501
 Selected features ::[11, 6, 7, 10, 3, 0, 2, 1, 4, 5, 8, 9]
 SVM Classifier--->Best feature set:: [11, 6]
 Best feature set accuracy:: 98.68637110016421
+
+
+2 sec window:
+
+Feature set [0]----> accuracy ::97.94594594594595
+Feature set [1]----> accuracy ::96.86486486486487
+Feature set [2]----> accuracy ::98.37837837837837
+Feature set [3]----> accuracy ::98.05405405405405
+Feature set [4]----> accuracy ::98.27027027027027
+Feature set [5]----> accuracy ::97.1891891891892
+Feature set [6]----> accuracy ::98.16216216216216
+Feature set [7]----> accuracy ::97.08108108108108
+Feature set [8]----> accuracy ::98.48648648648648
+Feature set [9]----> accuracy ::96.64864864864865
+Feature set [10]----> accuracy ::97.94594594594595
+Feature set [11]----> accuracy ::98.05405405405405
+Selected features ::[8]
+Feature set [8, 0]----> accuracy ::98.5945945945946
+Feature set [8, 1]----> accuracy ::98.48648648648648
+Feature set [8, 2]----> accuracy ::98.27027027027027
+Feature set [8, 3]----> accuracy ::97.83783783783784
+Feature set [8, 4]----> accuracy ::98.5945945945946
+Feature set [8, 5]----> accuracy ::98.16216216216216
+Feature set [8, 6]----> accuracy ::98.37837837837837
+Feature set [8, 7]----> accuracy ::98.37837837837837
+Feature set [8, 9]----> accuracy ::98.48648648648648
+Feature set [8, 10]----> accuracy ::98.5945945945946
+Feature set [8, 11]----> accuracy ::98.27027027027027
+Selected features ::[8, 0]
+Feature set [8, 0, 1]----> accuracy ::98.48648648648648
+Feature set [8, 0, 2]----> accuracy ::98.27027027027027
+Feature set [8, 0, 3]----> accuracy ::98.16216216216216
+Feature set [8, 0, 4]----> accuracy ::98.5945945945946
+Feature set [8, 0, 5]----> accuracy ::98.27027027027027
+Feature set [8, 0, 6]----> accuracy ::98.48648648648648
+Feature set [8, 0, 7]----> accuracy ::98.27027027027027
+Feature set [8, 0, 9]----> accuracy ::98.48648648648648
+Feature set [8, 0, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 11]----> accuracy ::98.27027027027027
+Selected features ::[8, 0, 4]
+Feature set [8, 0, 4, 1]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 2]----> accuracy ::98.16216216216216
+Feature set [8, 0, 4, 3]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 5]----> accuracy ::98.16216216216216
+Feature set [8, 0, 4, 6]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 7]----> accuracy ::98.48648648648648
+Feature set [8, 0, 4, 9]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 11]----> accuracy ::98.37837837837837
+Selected features ::[8, 0, 4, 3]
+Feature set [8, 0, 4, 3, 1]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 2]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 5]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 6]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 7]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 9]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 10]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 11]----> accuracy ::98.37837837837837
+Selected features ::[8, 0, 4, 3, 1]
+Feature set [8, 0, 4, 3, 1, 2]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 5]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 1, 7]----> accuracy ::98.27027027027027
+Feature set [8, 0, 4, 3, 1, 9]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 1, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 11]----> accuracy ::98.37837837837837
+Selected features ::[8, 0, 4, 3, 1, 6]
+Feature set [8, 0, 4, 3, 1, 6, 2]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 5]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 7]----> accuracy ::98.37837837837837
+Feature set [8, 0, 4, 3, 1, 6, 9]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 1, 6, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 11]----> accuracy ::98.37837837837837
+Selected features ::[8, 0, 4, 3, 1, 6, 9]
+Feature set [8, 0, 4, 3, 1, 6, 9, 2]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 5]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 7]----> accuracy ::98.37837837837837
+Feature set [8, 0, 4, 3, 1, 6, 9, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 11]----> accuracy ::98.37837837837837
+Selected features ::[8, 0, 4, 3, 1, 6, 9, 2]
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 5]----> accuracy ::98.70270270270271
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 7]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 11]----> accuracy ::98.27027027027027
+Selected features ::[8, 0, 4, 3, 1, 6, 9, 2, 5]
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 5, 7]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 5, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 5, 11]----> accuracy ::98.37837837837837
+Selected features ::[8, 0, 4, 3, 1, 6, 9, 2, 5, 7]
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 5, 7, 10]----> accuracy ::98.5945945945946
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 5, 7, 11]----> accuracy ::98.27027027027027
+Selected features ::[8, 0, 4, 3, 1, 6, 9, 2, 5, 7, 10]
+Feature set [8, 0, 4, 3, 1, 6, 9, 2, 5, 7, 10, 11]----> accuracy ::98.37837837837837
+Selected features ::[8, 0, 4, 3, 1, 6, 9, 2, 5, 7, 10, 11]
+Decision Tree Classifier--->Best feature set:: [8, 0, 4, 3]
+Best feature set accuracy:: 98.70270270270271
+Feature set [0]----> accuracy ::97.1891891891892
+Feature set [1]----> accuracy ::96.54054054054055
+Feature set [2]----> accuracy ::97.94594594594595
+Feature set [3]----> accuracy ::97.72972972972973
+Feature set [4]----> accuracy ::97.62162162162163
+Feature set [5]----> accuracy ::97.94594594594595
+Feature set [6]----> accuracy ::96.75675675675676
+Feature set [7]----> accuracy ::97.29729729729729
+Feature set [8]----> accuracy ::97.72972972972973
+Feature set [9]----> accuracy ::95.67567567567568
+Feature set [10]----> accuracy ::97.94594594594595
+Feature set [11]----> accuracy ::97.51351351351352
+Selected features ::[2]
+Feature set [2, 0]----> accuracy ::98.05405405405405
+Feature set [2, 1]----> accuracy ::97.83783783783784
+Feature set [2, 3]----> accuracy ::97.72972972972973
+Feature set [2, 4]----> accuracy ::98.70270270270271
+Feature set [2, 5]----> accuracy ::97.94594594594595
+Feature set [2, 6]----> accuracy ::98.37837837837837
+Feature set [2, 7]----> accuracy ::98.27027027027027
+Feature set [2, 8]----> accuracy ::98.8108108108108
+Feature set [2, 9]----> accuracy ::98.37837837837837
+Feature set [2, 10]----> accuracy ::98.48648648648648
+Feature set [2, 11]----> accuracy ::98.37837837837837
+Selected features ::[2, 8]
+Feature set [2, 8, 0]----> accuracy ::98.8108108108108
+Feature set [2, 8, 1]----> accuracy ::98.5945945945946
+Feature set [2, 8, 3]----> accuracy ::98.5945945945946
+Feature set [2, 8, 4]----> accuracy ::98.5945945945946
+Feature set [2, 8, 5]----> accuracy ::98.27027027027027
+Feature set [2, 8, 6]----> accuracy ::98.48648648648648
+Feature set [2, 8, 7]----> accuracy ::98.5945945945946
+Feature set [2, 8, 9]----> accuracy ::98.5945945945946
+Feature set [2, 8, 10]----> accuracy ::98.48648648648648
+Feature set [2, 8, 11]----> accuracy ::98.16216216216216
+Selected features ::[2, 8, 0]
+Feature set [2, 8, 0, 1]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3]----> accuracy ::98.8108108108108
+Feature set [2, 8, 0, 4]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 5]----> accuracy ::98.27027027027027
+Feature set [2, 8, 0, 6]----> accuracy ::98.27027027027027
+Feature set [2, 8, 0, 7]----> accuracy ::98.37837837837837
+Feature set [2, 8, 0, 9]----> accuracy ::98.37837837837837
+Feature set [2, 8, 0, 10]----> accuracy ::98.70270270270271
+Feature set [2, 8, 0, 11]----> accuracy ::98.37837837837837
+Selected features ::[2, 8, 0, 3]
+Feature set [2, 8, 0, 3, 1]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 4]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 5]----> accuracy ::98.16216216216216
+Feature set [2, 8, 0, 3, 6]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 7]----> accuracy ::98.37837837837837
+Feature set [2, 8, 0, 3, 9]----> accuracy ::98.70270270270271
+Feature set [2, 8, 0, 3, 10]----> accuracy ::98.91891891891892
+Feature set [2, 8, 0, 3, 11]----> accuracy ::98.37837837837837
+Selected features ::[2, 8, 0, 3, 10]
+Feature set [2, 8, 0, 3, 10, 1]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4]----> accuracy ::98.70270270270271
+Feature set [2, 8, 0, 3, 10, 5]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 6]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 7]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 9]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 11]----> accuracy ::98.37837837837837
+Selected features ::[2, 8, 0, 3, 10, 4]
+Feature set [2, 8, 0, 3, 10, 4, 1]----> accuracy ::98.70270270270271
+Feature set [2, 8, 0, 3, 10, 4, 5]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4, 6]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 4, 7]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 4, 9]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 4, 11]----> accuracy ::98.16216216216216
+Selected features ::[2, 8, 0, 3, 10, 4, 1]
+Feature set [2, 8, 0, 3, 10, 4, 1, 5]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4, 1, 6]----> accuracy ::98.70270270270271
+Feature set [2, 8, 0, 3, 10, 4, 1, 7]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4, 1, 9]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4, 1, 11]----> accuracy ::98.27027027027027
+Selected features ::[2, 8, 0, 3, 10, 4, 1, 6]
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 5]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 7]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 9]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 11]----> accuracy ::98.37837837837837
+Selected features ::[2, 8, 0, 3, 10, 4, 1, 6, 5]
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 5, 7]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 5, 9]----> accuracy ::98.5945945945946
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 5, 11]----> accuracy ::98.37837837837837
+Selected features ::[2, 8, 0, 3, 10, 4, 1, 6, 5, 9]
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 5, 9, 7]----> accuracy ::98.48648648648648
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 5, 9, 11]----> accuracy ::98.16216216216216
+Selected features ::[2, 8, 0, 3, 10, 4, 1, 6, 5, 9, 7]
+Feature set [2, 8, 0, 3, 10, 4, 1, 6, 5, 9, 7, 11]----> accuracy ::98.16216216216216
+Selected features ::[2, 8, 0, 3, 10, 4, 1, 6, 5, 9, 7, 11]
+Random Forest Classifier--->Best feature set:: [2, 8, 0, 3, 10]
+Best feature set accuracy:: 98.91891891891892
+Feature set [0]----> accuracy ::97.83783783783784
+Feature set [1]----> accuracy ::97.51351351351352
+Feature set [2]----> accuracy ::97.94594594594595
+Feature set [3]----> accuracy ::98.16216216216216
+Feature set [4]----> accuracy ::97.72972972972973
+Feature set [5]----> accuracy ::96.54054054054055
+Feature set [6]----> accuracy ::97.62162162162163
+Feature set [7]----> accuracy ::96.86486486486487
+Feature set [8]----> accuracy ::97.72972972972973
+Feature set [9]----> accuracy ::97.08108108108108
+Feature set [10]----> accuracy ::97.72972972972973
+Feature set [11]----> accuracy ::98.37837837837837
+Selected features ::[11]
+Feature set [11, 0]----> accuracy ::98.16216216216216
+Feature set [11, 1]----> accuracy ::98.27027027027027
+Feature set [11, 2]----> accuracy ::98.27027027027027
+Feature set [11, 3]----> accuracy ::98.16216216216216
+Feature set [11, 4]----> accuracy ::98.8108108108108
+Feature set [11, 5]----> accuracy ::98.48648648648648
+Feature set [11, 6]----> accuracy ::98.70270270270271
+Feature set [11, 7]----> accuracy ::98.48648648648648
+Feature set [11, 8]----> accuracy ::98.27027027027027
+Feature set [11, 9]----> accuracy ::98.70270270270271
+Feature set [11, 10]----> accuracy ::98.48648648648648
+Selected features ::[11, 4]
+Feature set [11, 4, 0]----> accuracy ::98.48648648648648
+Feature set [11, 4, 1]----> accuracy ::98.8108108108108
+Feature set [11, 4, 2]----> accuracy ::98.37837837837837
+Feature set [11, 4, 3]----> accuracy ::98.91891891891892
+Feature set [11, 4, 5]----> accuracy ::98.5945945945946
+Feature set [11, 4, 6]----> accuracy ::98.5945945945946
+Feature set [11, 4, 7]----> accuracy ::98.70270270270271
+Feature set [11, 4, 8]----> accuracy ::98.91891891891892
+Feature set [11, 4, 9]----> accuracy ::98.5945945945946
+Feature set [11, 4, 10]----> accuracy ::98.70270270270271
+Selected features ::[11, 4, 3]
+Feature set [11, 4, 3, 0]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 1]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 2]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 5]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 6]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 7]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 8]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 9]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 10]----> accuracy ::98.70270270270271
+Selected features ::[11, 4, 3, 0]
+Feature set [11, 4, 3, 0, 1]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 5]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 6]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 7]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 8]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 9]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 10]----> accuracy ::98.70270270270271
+Selected features ::[11, 4, 3, 0, 2]
+Feature set [11, 4, 3, 0, 2, 1]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 2, 6]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 7]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 2, 8]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 2, 9]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 2, 10]----> accuracy ::98.70270270270271
+Selected features ::[11, 4, 3, 0, 2, 5]
+Feature set [11, 4, 3, 0, 2, 5, 1]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5, 6]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5, 7]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 2, 5, 8]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 2, 5, 9]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 2, 5, 10]----> accuracy ::98.8108108108108
+Selected features ::[11, 4, 3, 0, 2, 5, 7]
+Feature set [11, 4, 3, 0, 2, 5, 7, 1]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5, 7, 6]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5, 7, 8]----> accuracy ::98.91891891891892
+Feature set [11, 4, 3, 0, 2, 5, 7, 9]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 2, 5, 7, 10]----> accuracy ::98.8108108108108
+Selected features ::[11, 4, 3, 0, 2, 5, 7, 8]
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 1]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 6]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 9]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 10]----> accuracy ::98.8108108108108
+Selected features ::[11, 4, 3, 0, 2, 5, 7, 8, 1]
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 1, 6]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 1, 9]----> accuracy ::98.8108108108108
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 1, 10]----> accuracy ::98.70270270270271
+Selected features ::[11, 4, 3, 0, 2, 5, 7, 8, 1, 9]
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 1, 9, 6]----> accuracy ::98.70270270270271
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 1, 9, 10]----> accuracy ::98.70270270270271
+Selected features ::[11, 4, 3, 0, 2, 5, 7, 8, 1, 9, 6]
+Feature set [11, 4, 3, 0, 2, 5, 7, 8, 1, 9, 6, 10]----> accuracy ::98.70270270270271
+Selected features ::[11, 4, 3, 0, 2, 5, 7, 8, 1, 9, 6, 10]
+SVM Classifier--->Best feature set:: [11, 4, 3]
+Best feature set accuracy:: 98.91891891891892
