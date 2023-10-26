@@ -1,0 +1,44 @@
+
+1 sec window:
+
+Decision Tree Classifier--->Best feature set:: [2, 6, 1, 4, 0, 8, 7]
+Best feature set accuracy:: 98.63163656267105
+
+Random Forest Classifier--->Best feature set:: [0, 10, 6, 2, 8, 11, 4, 7]
+Best feature set accuracy:: 99.01477832512315
+
+SVM Classifier--->Best feature set:: [11, 6]
+Best feature set accuracy:: 98.68637110016421
+
+2 sec window:
+
+Decision Tree Classifier--->Best feature set:: [8, 0, 4, 3]
+Best feature set accuracy:: 98.70270270270271
+
+Random Forest Classifier--->Best feature set:: [2, 8, 0, 3, 10]
+Best feature set accuracy:: 98.91891891891892
+
+SVM Classifier--->Best feature set:: [11, 4, 3]
+Best feature set accuracy:: 98.91891891891892
+
+3 sec window:
+
+Decision Tree Classifier--->Best feature set:: [11]
+Best feature set accuracy:: 98.86547811993518
+
+Random Forest Classifier--->Best feature set:: [11, 6]
+Best feature set accuracy:: 98.86547811993518
+
+SVM Classifier--->Best feature set:: [11, 4]
+Best feature set accuracy:: 99.02755267423015
+
+4 sec window:
+
+Decision Tree Classifier--->Best feature set:: [4, 11]
+Best feature set accuracy:: 99.13793103448276
+
+Random Forest Classifier--->Best feature set:: [8]
+Best feature set accuracy:: 99.35344827586206
+
+SVM Classifier--->Best feature set:: [10, 3, 4, 11]
+Best feature set accuracy:: 99.13793103448276
